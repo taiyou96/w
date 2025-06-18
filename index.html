@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>灘区中高生 自習室 | 神戸大学ボランティア運営</title>
+
+  <!-- Google フォント -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  /* ── 基本 ─────────────────────────── */
+  body{
+    margin:0;padding:0;font-family:'Noto Sans JP',sans-serif;
+    font-size:17px;line-height:1.8;
+    background:#f5f7fa;color:#1a237e;
+    transition:background .3s,color .3s;
+  }
+  body.dark{background:#121212;color:#e0e0e0;}
+
+  /* ── セクション/カード ───────────────── */
+  section{
+    background:#fff;margin-bottom:30px;padding:26px;
+    border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,.05);
+    transition:background .3s;
+  }
+  body.dark section{
+    background:#1e1e1e;box-shadow:0 0 10px rgba(255,255,255,.05);
+  }
+
+  /* ── 見出し/ヘッダー ─────────────────── */
+  header{
+    background:#1565c0;color:#fff;padding:60px 20px 40px;text-align:center;
+  }
+  h1{font-size:3em;font-weight:700;margin:0;letter-spacing:1px}
+  p.subtitle{font-size:1.3em;margin-top:12px;color:#bbdefb}
+
+  /* ── コンテナ ───────────────────────── */
+  .container{max-width:1000px;margin:30px auto;padding:0 16px}
+
+  section h2{
+    font-size:1.6em;border-left:5px solid #1565c0;padding-left:12px;
+    color:#0d47a1;margin-bottom:15px;
+  }
+  ul{padding-left:24px}
+
+  /* ── 強調カード────────────────────── */
+  .highlight{
+    background:#e3f2fd;border-left:5px solid #42a5f5;
+    padding:22px;border-radius:8px;margin-bottom:30px;
+  }
+  body.dark .highlight{
+    background:#263238;border-left-color:#90caf9;
+  }
+
+  /* ── ボタン ───────────────────────── */
+  .button{
+    display:inline-block;background:#1976d2;color:#fff;
+    padding:16px 28px;border-radius:6px;text-decoration:none;
+    font-weight:bold;font-size:1.1em;transition:.3s;
+  }
+  .button:hover{background:#0d47a1}
+
+  /* ── Map ───────────────────────────── */
+  iframe{
+    width:100%;height:400px;border:none;
+    border-radius:10px;margin-top:10px;
+  }
+
+  /* ── LINE バナー ───────────────────── */
+  .line-banner{text-align:center;margin-top:40px}
+  .line-banner img{height:36px;border:0}
+
+  /* ── フッター ─────────────────────── */
+  footer{
+    text-align:center;padding:30px 16px;font-size:1em;
+    color:#607d8b;background:#eeeeee;
+  }
+  body.dark footer{background:#2c2c2c;color:#aaa}
+
+  /* ── ダークモードトグル ─────────────── */
+  .toggle-mode{text-align:center;margin:20px}
+  .toggle-mode button{
+    background:#1976d2;color:#fff;border:none;padding:10px 20px;
+    border-radius:6px;cursor:pointer;
+  }
+
+  /* ── モバイル調整 ─────────────────── */
+  @media(max-width:600px){
+    body{font-size:18px}
+    h1{font-size:2.4em}
+    .button{width:100%;display:block;text-align:center;margin-top:16px}
+  }
+  </style>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header>
+    <h1>灘区 中高自習塾</h1>
+    <p class="subtitle">神戸大学生ボランティアが運営する地域支援型学習環境</p>
+  </header>
+
+  <!-- ダークモード切替 -->
+  <div class="toggle-mode">
+    <button onclick="document.body.classList.toggle('dark')">🌙 ダークモード切り替え</button>
+  </div>
+
+  <!-- メイン -->
+  <div class="container">
+
+    <!-- PR -->
+    <section class="highlight">
+      <h2>自分の力、あと少し伸ばしたいと感じているあなたへ</h2>
+      <p>
+        家ではどうしても集中できない、塾に通うほどじゃないけど誰かに聞ける場所が欲しい。<br>
+        そんな中高生のために、安心して静かに学べる場所を用意しました。<br>
+        「あとちょっと」を、ここで一緒に埋めてみませんか？
+      </p>
+    </section>
+
+    <!-- お知らせ（手動で li に入力 or 後で JS 挿入も可） -->
+    <section>
+      <h2>お知らせ</h2>
+      <ul>
+        <li>📌 6月25日は臨時休室です</li>
+        <li>📌 期末テスト対策質問会 7/2 開催！</li>
+      </ul>
+    </section>
+
+    <!-- 概要 -->
+    <section>
+      <h2>自習塾の概要</h2>
+      <p>
+        本自習塾は、神戸市灘区に居住または通学する中学生・高校生を対象に、無料で利用できる学習スペースを提供しています。
+        神戸大学の学生ボランティアが運営し、安心で静かな学習環境を整えています。
+      </p>
+    </section>
+
+    <!-- 開催日時 -->
+    <section>
+      <h2>開催日時と対象者</h2>
+      <p>
+        ・毎週火曜日 18:00〜21:00（中学生は20:00まで）※時間内出入り自由<br>
+        ・対象：灘区在住または灘区の学校に通う中学生・高校生<br>
+        ・定員：10名（事前予約制・先着順）
+      </p>
+    </section>
+
+    <!-- サービス内容 -->
+    <section>
+      <h2>サービス内容</h2>
+      <ul>
+        <li>静かで集中しやすい学習環境の提供</li>
+        <li>大学生サポーターによる見守りと質問対応</li>
+        <li>参考書・学習用品の一部貸出あり</li>
+        <li>LINEによる事前相談・質問対応</li>
+      </ul>
+    </section>
+
+    <!-- 予約 -->
+    <section>
+      <h2>予約方法</h2>
+      <p>下記フォームよりお申込みください。定員に達し次第、受付終了となります。</p>
+      <a class="button" href="https://script.google.com/macros/s/AKfycbxAIZHR3SCn5RuxIr3ZqQxRckubfuKYTHO52Bisg3HolyvChSp127txPP2iq5Ki0x24kw/exec" target="_blank">予約フォーム</a>
+    </section>
+
+    <!-- アクセス -->
+    <section>
+      <h2>アクセス</h2>
+      <p>〒657-0042 兵庫県神戸市灘区烏帽子町3丁目1-12 第二橋本マンション</p>
+      <iframe
+        src="https://www.google.com/maps?q=34.709912724839036,135.23572190525277&z=17&output=embed"
+        allowfullscreen loading="lazy"></iframe>
+    </section>
+
+    <!-- LINE -->
+    <section class="line-banner">
+      <h2>📱 LINEでのお問い合わせ</h2>
+      <p>ご質問やご相談は、LINE公式アカウントからどうぞ。</p>
+      <a href="https://lin.ee/8qLyAj6" target="_blank">
+        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加">
+      </a>
+    </section>
+
+  </div><!-- /container -->
+
+  <!-- フッター -->
+  <footer>
+    主催：つばめの会（神戸大学学生ボランティア） ｜ お問い合わせはLINE公式アカウントまでご連絡ください。
+  </footer>
+</body>
+</html>
